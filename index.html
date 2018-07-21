@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Deploy Contract From Browser Sample</title>
+    </head>
+    <body>
+        <h1>Deploy Contract From Browser Sample</h1>
+        <form>
+            <textarea id='js-contract'>
+pragma solidity ^0.4.24;
+
+contract HelloWorld {
+  function displayMessage() constant returns (string) {
+      return "Whale hello there!";
+  }
+}
+            </textarea>
+            <input id='js-deploy' type='button' value="Deploy"/>
+            <div id='js-status'></div>
+        </form>
+
+        <script src="libs/solc.min.js" type="text/javascript"></script>
+        <script src="libs/web3.min.js" type="text/javascript"></script>
+        <script src="index.js" type="text/javascript"></script>
+    </body>
+</html>
